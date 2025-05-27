@@ -1,0 +1,15 @@
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\BudgetTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\BudgetTracker.AssemblyInfoInputs.cache
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\BudgetTracker.AssemblyInfo.cs
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\BudgetTracker.csproj.CoreCompileInputs.cache
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\BudgetTracker.sourcelink.json
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\bin\Debug\net8.0\BudgetTracker.exe
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\bin\Debug\net8.0\BudgetTracker.deps.json
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\bin\Debug\net8.0\BudgetTracker.runtimeconfig.json
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\bin\Debug\net8.0\BudgetTracker.dll
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\bin\Debug\net8.0\BudgetTracker.pdb
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\BudgetTracker.dll
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\refint\BudgetTracker.dll
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\BudgetTracker.pdb
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\BudgetTracker.genruntimeconfig.cache
+C:\Kouluhommat\BudgetTracker\BudgetTracker\BudgetTracker\obj\Debug\net8.0\ref\BudgetTracker.dll

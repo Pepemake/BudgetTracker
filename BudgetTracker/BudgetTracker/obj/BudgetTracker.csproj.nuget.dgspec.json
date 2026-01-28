@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Kouluhommat\\BudgetTracker\\BudgetTracker\\BudgetTracker\\BudgetTracker.csproj": {}
+    "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\BudgetTracker\\BudgetTracker.csproj": {}
   },
   "projects": {
-    "C:\\Kouluhommat\\BudgetTracker\\BudgetTracker\\BudgetTracker\\BudgetTracker.csproj": {
+    "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\BudgetTracker\\BudgetTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Kouluhommat\\BudgetTracker\\BudgetTracker\\BudgetTracker\\BudgetTracker.csproj",
+        "projectUniqueName": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\BudgetTracker\\BudgetTracker.csproj",
         "projectName": "BudgetTracker",
-        "projectPath": "C:\\Kouluhommat\\BudgetTracker\\BudgetTracker\\BudgetTracker\\BudgetTracker.csproj",
-        "packagesPath": "C:\\Users\\perttu\\.nuget\\packages\\",
-        "outputPath": "C:\\Kouluhommat\\BudgetTracker\\BudgetTracker\\BudgetTracker\\obj\\",
+        "projectPath": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\BudgetTracker\\BudgetTracker.csproj",
+        "packagesPath": "C:\\Users\\phoeu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\BudgetTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\perttu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phoeu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

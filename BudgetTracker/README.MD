@@ -1,22 +1,3 @@
-USE [Budget Tracker];
-GO
+Simple show of current knowledge:
 
-CREATE TABLE KATEGORIA (
-	KategoriaID INT PRIMARY KEY IDENTITY(1,1),
-	NIMI NVARCHAR(100) NOT NULL,
-	TYYPPI NVARCHAR(255) NULL
-);
-CREATE TABLE TAPAHTUMA (
-ID INT PRIMARY KEY IDENTITY(1,1),
-SUMMA DECIMAL(10, 2) NOT NULL,
-PVM DATETIME NOT NULL,
-Kuvaus NVARCHAR(255) NULL,
-KATEGORIAID INT,
-CONSTRAINT FK_TAPAHTUMA_KATEGORIA FOREIGN KEY (KATEGORIAID) 
-REFERENCES KATEGORIA(KategoriaID)
-);
-INSERT INTO KATEGORIA (NIMI, TYYPPI) VALUES ('Ruoka', 'Menot'), ('Palkka', 'Tulot');
-INSERT INTO TAPAHTUMA (SUMMA, PVM, Kuvaus, KATEGORIAID)
-VALUES (50.00, GETDATE(), 'Ostokset', 1);
-
-// sql query to create database and fill it with necessary info
+Budget tracker should take 4 inputs and convert them into an entry of the days budget and add to database, maybe i will add something else. very simple project

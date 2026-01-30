@@ -63,3 +63,75 @@ C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTrack
 C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.pdb
 C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.genruntimeconfig.cache
 C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\ref\Budget Tracker.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Budget Tracker.exe
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Budget Tracker.deps.json
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Budget Tracker.runtimeconfig.json
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Budget Tracker.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Budget Tracker.pdb
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Azure.Core.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Azure.Identity.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Data.SqlClient.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Extensions.Options.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Identity.Client.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\Microsoft.SqlServer.Server.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.ClientModel.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.Data.SqlClient.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.Diagnostics.EventLog.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.Memory.Data.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win-x64\native\sni.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win-x86\native\sni.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.csproj.AssemblyReference.cache
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget_Tracker.Form1.resources
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.csproj.GenerateResource.cache
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.AssemblyInfoInputs.cache
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.AssemblyInfo.cs
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.csproj.CoreCompileInputs.cache
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.sourcelink.json
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget T.32D8F162.Up2Date
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\refint\Budget Tracker.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.pdb
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.genruntimeconfig.cache
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\ref\Budget Tracker.dll

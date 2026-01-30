@@ -1,46 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\",
+  "WorkspaceRootPath": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\users\\phoeu\\documents\\koodi projektit\\tvt2026 talvi\\budgettracker\\budgettracker\\budget tracker\\databasehallinta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\databasehallinta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\users\\phoeu\\documents\\koodi projektit\\tvt2026 talvi\\budgettracker\\budgettracker\\budget tracker\\tapahtuma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\tapahtuma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\users\\phoeu\\documents\\koodi projektit\\tvt2026 talvi\\budgettracker\\budgettracker\\budget tracker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\budget tracker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\users\\phoeu\\documents\\koodi projektit\\tvt2026 talvi\\budgettracker\\budgettracker\\budget tracker\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\users\\phoeu\\documents\\koodi projektit\\tvt2026 talvi\\budgettracker\\budgettracker\\budget tracker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\kouluhommat\\budget\\budgettracker\\budgettracker\\budget tracker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Budget Tracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\kouluhommat\\budget\\budgettracker\\budgettracker\\budget tracker\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\users\\phoeu\\documents\\koodi projektit\\tvt2026 talvi\\budgettracker\\budgettracker\\budget tracker\\budget tracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\README.MD||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:README.MD||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\kouluhommat\\budget\\budgettracker\\budgettracker\\budget tracker\\databasehallinta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\databasehallinta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\kouluhommat\\budget\\budgettracker\\budgettracker\\budget tracker\\budget tracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\budget tracker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\users\\phoeu\\documents\\koodi projektit\\tvt2026 talvi\\budgettracker\\budgettracker\\budget tracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\kouluhommat\\budget\\budgettracker\\budgettracker\\budget tracker\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|",
+      "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\kouluhommat\\budget\\budgettracker\\budgettracker\\budget tracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Budget Tracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|c:\\kouluhommat\\budget\\budgettracker\\budgettracker\\budget tracker\\tapahtuma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E69EB5F-6FBD-4236-B3E8-96CDD27D43AF}|Budget Tracker\\Budget Tracker.csproj|solutionrelative:budget tracker\\tapahtuma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Budget Tracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SQLQuery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,45 +58,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "README.MD",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\README.MD",
+              "RelativeDocumentMoniker": "README.MD",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\README.MD",
+              "RelativeToolTip": "README.MD",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-01-30T12:05:50.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\SQLQuery1.sql",
+              "RelativeDocumentMoniker": "SQLQuery1.sql",
+              "ToolTip": "SQLQuery1.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-30T11:59:50.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Budget Tracker\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.Designer.cs",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.Designer.cs",
               "RelativeToolTip": "Budget Tracker\\Form1.Designer.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAawHQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T10:21:52.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.cs",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.cs",
               "RelativeDocumentMoniker": "Budget Tracker\\Form1.cs",
-              "ToolTip": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.cs",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.cs",
               "RelativeToolTip": "Budget Tracker\\Form1.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAvwAkAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T10:20:51.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.cs",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.cs",
               "RelativeDocumentMoniker": "Budget Tracker\\Form1.cs",
-              "ToolTip": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.cs [Design]",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Form1.cs [Design]",
               "RelativeToolTip": "Budget Tracker\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T09:34:29.679Z",
@@ -96,11 +124,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Tapahtuma.cs",
-              "DocumentMoniker": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Tapahtuma.cs",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Tapahtuma.cs",
               "RelativeDocumentMoniker": "Budget Tracker\\Tapahtuma.cs",
-              "ToolTip": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Tapahtuma.cs",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Tapahtuma.cs",
               "RelativeToolTip": "Budget Tracker\\Tapahtuma.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -109,24 +137,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Databasehallinta.cs",
-              "DocumentMoniker": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Databasehallinta.cs",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Databasehallinta.cs",
               "RelativeDocumentMoniker": "Budget Tracker\\Databasehallinta.cs",
-              "ToolTip": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Databasehallinta.cs",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Databasehallinta.cs",
               "RelativeToolTip": "Budget Tracker\\Databasehallinta.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAlwBgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T09:54:59.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Program.cs",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Program.cs",
               "RelativeDocumentMoniker": "Budget Tracker\\Program.cs",
-              "ToolTip": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Program.cs",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Program.cs",
               "RelativeToolTip": "Budget Tracker\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -135,11 +163,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\SQLQuery1.sql",
+              "DocumentIndex": 7,
+              "Title": "SQLQuery1.sql",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\SQLQuery1.sql",
               "RelativeDocumentMoniker": "Budget Tracker\\SQLQuery1.sql",
-              "ToolTip": "SQLQuery1.sql ",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\SQLQuery1.sql",
+              "RelativeToolTip": "Budget Tracker\\SQLQuery1.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2026-01-28T09:37:14.163Z",
               "EditorCaption": ""
@@ -147,15 +176,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Budget Tracker",
-              "DocumentMoniker": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Budget Tracker.csproj",
+              "Title": "Budget Tracker.csproj",
+              "DocumentMoniker": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Budget Tracker.csproj",
               "RelativeDocumentMoniker": "Budget Tracker\\Budget Tracker.csproj",
-              "ToolTip": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Budget Tracker.csproj",
+              "ToolTip": "C:\\Kouluhommat\\Budget\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Budget Tracker.csproj",
               "RelativeToolTip": "Budget Tracker\\Budget Tracker.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-28T09:34:41.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-28T09:34:41.438Z"
             }
           ]
         }

@@ -1,21 +1,8 @@
-﻿USE [Budget Tracker];
-GO
+﻿INSERT INTO Kategoria (Nimi, Tyyppi) VALUES ('Tulo', 'Tulo'), ('Meno', 'Meno');
 
-CREATE TABLE KATEGORIA (
-	KategoriaID INT PRIMARY KEY IDENTITY(1,1),
-	NIMI NVARCHAR(100) NOT NULL,
-	TYYPPI NVARCHAR(255) NULL
-);
-CREATE TABLE TAPAHTUMA (
-ID INT PRIMARY KEY IDENTITY(1,1),
-SUMMA DECIMAL(10, 2) NOT NULL,
-PVM DATETIME NOT NULL,
-Kuvaus NVARCHAR(255) NULL,
-KATEGORIAID INT,
-CONSTRAINT FK_TAPAHTUMA_KATEGORIA FOREIGN KEY (KATEGORIAID) 
-REFERENCES KATEGORIA(KategoriaID)
-);
-INSERT INTO KATEGORIA (NIMI, TYYPPI) VALUES ('Ruoka', 'Menot'), ('Palkka', 'Tulot');
-INSERT INTO TAPAHTUMA (SUMMA, PVM, Kuvaus, KATEGORIAID)
-VALUES (50.00, GETDATE(), 'Ostokset', 1);
 
+INSERT INTO Tapahtuma (TapahtumaNimi, Paivamaara, Summa, KategoriaID, Kuvaus)
+VALUES 
+('Tammikuun palkka', '2026-01-31', 2850.00, (SELECT ID FROM Kategoria WHERE Nimi='Tulo'), 'Päätyö'),
+('S-Market haku', '2026-02-01', 54.20, (SELECT ID FROM Kategoria WHERE Nimi='Meno'), 'Ruokaostokset'),
+('Vuokra', '2026-02-01', 750.00, (SELECT ID FROM Kategoria WHERE Nimi='Meno'), 'Helmikuu');

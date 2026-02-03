@@ -9,42 +9,38 @@ namespace Budget_Tracker
 {
     public class DatabaseHallinta
     {
-        
-        private string BudgetTracker = @"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=BudgetTracker;Integrated Security=True;TrustServerCertificate=True";
-        private SqlConnection dbYhteys;
 
-        private bool AvaaYhteys()
-        {
-            try
-            {
-                dbYhteys = new SqlConnection(BudgetTracker);
-                dbYhteys.Open();
-                return true;
-            }
-            catch { return false; }
-        }
-
-        private void SuljeYhteys() => dbYhteys?.Close();
-
+        private string BudgetTracker = @"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=BudjettiDatabase;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
         public List<Tapahtuma> HaeKaikkiTapahtumat()
         {
             List<Tapahtuma> lista = new List<Tapahtuma>();
-            string sql = @"SELECT t.*, k.Nimi AS KategoriaNimi 
-                           FROM Tapahtuma t
-                           INNER JOIN Kategoria k ON t.KategoriaID = k.ID
-                           ORDER BY t.Paivamaara DESC";
-
-            if (AvaaYhteys())
+            string sql = @"SELECT t.ID, t.TapahtumaNimi, t.Summa, t.Paivamaara, t.Kuvaus, t.KategoriaID, 
+                      k.Nimi AS Tyyppi 
+               FROM Tapahtuma t
+               LEFT JOIN Kategoria k ON t.KategoriaID = k.ID
+               ORDER BY t.Paivamaara DESC";
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
             {
-                SqlCommand cmd = new SqlCommand(sql, dbYhteys);
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
                 {
-                    lista.Add(Tapahtuma.Create(rdr));
+                    conn.Open();
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            lista.Add(Tapahtuma.Create(rdr));
+                        }
+                    }
                 }
-                SuljeYhteys();
-            }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Ongelma tietokannassa: " + ex.Message);
+                }
+            } 
+
             return lista;
         }
+
     }
 }

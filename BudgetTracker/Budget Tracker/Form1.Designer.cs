@@ -34,9 +34,11 @@
             gbMain = new GroupBox();
             dataGridView1 = new DataGridView();
             gb2 = new GroupBox();
+            label4 = new Label();
+            label2 = new Label();
+            textBox2 = new TextBox();
             textBox1 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
-            label4 = new Label();
             label3 = new Label();
             pvm = new Label();
             label1 = new Label();
@@ -54,142 +56,154 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { loremToolStripMenuItem, ipsumToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(918, 24);
+            menuStrip1.Padding = new Padding(6, 3, 0, 3);
+            menuStrip1.Size = new Size(1049, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // loremToolStripMenuItem
             // 
             loremToolStripMenuItem.Name = "loremToolStripMenuItem";
-            loremToolStripMenuItem.Size = new Size(53, 20);
+            loremToolStripMenuItem.Size = new Size(65, 24);
             loremToolStripMenuItem.Text = "Lorem";
             // 
             // ipsumToolStripMenuItem
             // 
             ipsumToolStripMenuItem.Name = "ipsumToolStripMenuItem";
-            ipsumToolStripMenuItem.Size = new Size(52, 20);
+            ipsumToolStripMenuItem.Size = new Size(63, 24);
             ipsumToolStripMenuItem.Text = "Ipsum";
             // 
             // gbMain
             // 
             gbMain.Controls.Add(dataGridView1);
-            gbMain.Location = new Point(18, 23);
-            gbMain.Margin = new Padding(3, 2, 3, 2);
+            gbMain.Location = new Point(21, 31);
             gbMain.Name = "gbMain";
-            gbMain.Padding = new Padding(3, 2, 3, 2);
-            gbMain.Size = new Size(402, 324);
+            gbMain.Size = new Size(459, 432);
             gbMain.TabIndex = 1;
             gbMain.TabStop = false;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(5, 12);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Location = new Point(6, 16);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(392, 308);
+            dataGridView1.Size = new Size(448, 411);
             dataGridView1.TabIndex = 0;
             // 
             // gb2
             // 
+            gb2.Controls.Add(label4);
+            gb2.Controls.Add(label2);
+            gb2.Controls.Add(textBox2);
             gb2.Controls.Add(textBox1);
             gb2.Controls.Add(dateTimePicker1);
-            gb2.Controls.Add(label4);
             gb2.Controls.Add(label3);
             gb2.Controls.Add(pvm);
             gb2.Controls.Add(label1);
             gb2.Controls.Add(comboBox4);
             gb2.Controls.Add(comboBox1);
-            gb2.Location = new Point(455, 23);
-            gb2.Margin = new Padding(3, 2, 3, 2);
+            gb2.Location = new Point(520, 31);
             gb2.Name = "gb2";
-            gb2.Padding = new Padding(3, 2, 3, 2);
-            gb2.Size = new Size(353, 320);
+            gb2.Size = new Size(385, 427);
             gb2.TabIndex = 2;
             gb2.TabStop = false;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(82, 138);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(203, 154);
-            textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(81, 62);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(15, 104);
+            label4.Location = new Point(7, 137);
             label4.Name = "label4";
-            label4.Size = new Size(60, 15);
-            label4.TabIndex = 7;
+            label4.Size = new Size(77, 20);
+            label4.TabIndex = 11;
             label4.Text = "Kategoria:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(166, 137);
+            label2.Name = "label2";
+            label2.Size = new Size(54, 20);
+            label2.TabIndex = 10;
+            label2.Text = "Määrä:";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(222, 134);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(99, 27);
+            textBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(94, 184);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(231, 204);
+            textBox1.TabIndex = 8;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(93, 91);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(228, 27);
+            dateTimePicker1.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(27, 138);
+            label3.Location = new Point(7, 184);
             label3.Name = "label3";
-            label3.Size = new Size(48, 15);
+            label3.Size = new Size(58, 20);
             label3.TabIndex = 6;
             label3.Text = "Kuvaus:";
             // 
             // pvm
             // 
             pvm.AutoSize = true;
-            pvm.Location = new Point(6, 68);
+            pvm.Location = new Point(6, 91);
             pvm.Name = "pvm";
-            pvm.Size = new Size(71, 15);
+            pvm.Size = new Size(88, 20);
             pvm.TabIndex = 5;
             pvm.Text = "Päivämäärä:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(5, 22);
+            label1.Location = new Point(7, 42);
             label1.Name = "label1";
-            label1.Size = new Size(70, 15);
+            label1.Size = new Size(85, 20);
             label1.TabIndex = 4;
             label1.Text = "Tapahtuma:";
             // 
             // comboBox4
             // 
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(81, 101);
-            comboBox4.Margin = new Padding(3, 2, 3, 2);
+            comboBox4.Location = new Point(93, 134);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(201, 23);
+            comboBox4.Size = new Size(73, 28);
             comboBox4.TabIndex = 3;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(81, 20);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
+            comboBox1.Location = new Point(94, 42);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(201, 23);
+            comboBox1.Size = new Size(229, 28);
             comboBox1.TabIndex = 0;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(918, 485);
+            AutoSize = true;
+            ClientSize = new Size(1049, 647);
             Controls.Add(gb2);
             Controls.Add(gbMain);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             menuStrip1.ResumeLayout(false);
@@ -214,9 +228,11 @@
         private ComboBox comboBox1;
         private Label label1;
         private DateTimePicker dateTimePicker1;
-        private Label label4;
         private Label label3;
         private Label pvm;
         private TextBox textBox1;
+        private TextBox textBox2;
+        private Label label2;
+        private Label label4;
     }
 }

@@ -41,6 +41,65 @@ namespace Budget_Tracker
 
             return lista;
         }
+        public List<Kategoria> HaeKategoriat()
+        {
+            List<Kategoria> lista = new List<Kategoria>();
+            string sql = "SELECT ID, Nimi FROM Kategoria";
+
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                using (SqlDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        lista.Add(new Kategoria
+                        {
+                            ID = (int)rdr["ID"],
+                            Nimi = rdr["Nimi"].ToString()
+                        });
+                    }
+                }
+            }
+            return lista;
+        }
+        public void LisaaTapahtuma(string nimi, DateTime pvm, decimal summa, int kategoriaID, string kuvaus)
+        {
+            string sql = @"INSERT INTO Tapahtuma (TapahtumaNimi, Paivamaara, Summa, KategoriaID, Kuvaus) 
+                   VALUES (@nimi, @pvm, @summa, @kid, @kuvaus)";
+
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nimi", nimi);
+                cmd.Parameters.AddWithValue("@pvm", pvm);
+                cmd.Parameters.AddWithValue("@summa", summa);
+                cmd.Parameters.AddWithValue("@kid", kategoriaID);
+                cmd.Parameters.AddWithValue("@kuvaus", kuvaus);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void MuokkaaTapahtuma(int id, string nimi, DateTime pvm, decimal summa, int kategoriaID, string kuvaus)
+        {
+            string sql = @"UPDATE Tapahtuma 
+            SET TapahtumaNimi = @nimi, Paivamaara = @pvm, Summa = @summa, 
+            KategoriaID = @kid, Kuvaus = @kuvaus 
+            WHERE ID = @id";
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@nimi", nimi);
+                cmd.Parameters.AddWithValue("@pvm", pvm);
+                cmd.Parameters.AddWithValue("@summa", summa);
+                cmd.Parameters.AddWithValue("@kid", kategoriaID);
+                cmd.Parameters.AddWithValue("@kuvaus", kuvaus);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
 
     }
 }

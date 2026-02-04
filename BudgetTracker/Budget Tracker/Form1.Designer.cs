@@ -227,6 +227,7 @@
             btnPaivita.TabIndex = 3;
             btnPaivita.Text = "Päivitä";
             btnPaivita.UseVisualStyleBackColor = true;
+            btnPaivita.Click += btnPaivita_Click;
             // 
             // btnPoista
             // 
@@ -236,6 +237,7 @@
             btnPoista.TabIndex = 2;
             btnPoista.Text = "Poista";
             btnPoista.UseVisualStyleBackColor = true;
+            btnPoista.Click += btnPoista_Click;
             // 
             // btnMuokkaa
             // 

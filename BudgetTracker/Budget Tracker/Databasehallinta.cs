@@ -11,6 +11,7 @@ namespace Budget_Tracker
     {
 
         private string BudgetTracker = @"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=BudjettiDatabase;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
+        // Be sure to switch Initial Catalog to the Database of your choice, query can be found on the SQLQuery1.SQL
         public List<Tapahtuma> HaeKaikkiTapahtumat()
         {
             List<Tapahtuma> lista = new List<Tapahtuma>();
@@ -96,6 +97,17 @@ namespace Budget_Tracker
                 cmd.Parameters.AddWithValue("@summa", summa);
                 cmd.Parameters.AddWithValue("@kid", kategoriaID);
                 cmd.Parameters.AddWithValue("@kuvaus", kuvaus);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void PoistaTapahtuma(int id)
+        {
+            string sql = "DELETE FROM Tapahtuma WHERE ID = @id";
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }

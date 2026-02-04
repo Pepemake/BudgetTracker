@@ -10,6 +10,7 @@ namespace Budget_Tracker
         }
         DatabaseHallinta db = new DatabaseHallinta();
         private int muokattavaID = 0;
+        private int klikkausLaskuri = 0;
 
 
 
@@ -118,8 +119,40 @@ namespace Budget_Tracker
                 }
             }
         }
+        private void btnPoista_Click(object sender, EventArgs e)
+        {
 
+            if (muokattavaID == 0)
+            {
+                MessageBox.Show("Valitse ensin poistettava tapahtuma listasta!");
+                return;
+            }
+            DialogResult vastaus = MessageBox.Show("Haluatko varmasti poistaa valitun tapahtuman? Tätä tapahtumaa ei voi perua.",
+                                                  "Vahvista poisto",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Warning);
+            if (vastaus == DialogResult.Yes)
+            {
+                try
+                {
+                    db.PoistaTapahtuma(muokattavaID);
+                    muokattavaID = 0;
+                    TyhjennaKentat();
+                    PaivitaNaytto();
+                    MessageBox.Show("Tapahtuma poistettu onnistuneesti.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Virhe poistettaessa: " + ex.Message);
+                }
+            }
+        }
 
+        private void btnPaivita_Click(object sender, EventArgs e)
+        {
+            PaivitaNaytto();
+            
+        }
     }
 
 

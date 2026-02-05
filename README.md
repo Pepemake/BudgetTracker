@@ -1,14 +1,11 @@
 # BudgetTracker
-Summer Coding Project
+Coding Project for school | own interest
 
-Idea is to make a Budget Tracker wich asks 
+Budget Tracker is an application wich can be used by multiple different profiles, store "budget" and calculate the sum | difference 
+of the budget on a time fork 
 
-Income / Expense
-Amount
-Type
-Date (Optional)
-Comment (Optional)
+You are able to create a profile wich is stored into your database
+This profile can access its own budget, and see statistics of it | compare between months or selected time
+Graphs WIP 
 
-then makes a new Entry (Budget) and stores it on a list => Saves to a File
 
-WIP 

@@ -10,8 +10,9 @@ namespace Budget_Tracker
     public class DatabaseHallinta
     {
 
-        private string BudgetTracker = @"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=BudjettiDatabase;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
+        public string BudgetTracker = @"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=BudjettiDatabase;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
         // Be sure to switch Initial Catalog to the Database of your choice, query can be found on the SQLQuery1.SQL
+        public static int KirjautunutID;
         public List<Tapahtuma> HaeKaikkiTapahtumat()
         {
             List<Tapahtuma> lista = new List<Tapahtuma>();
@@ -112,6 +113,112 @@ namespace Budget_Tracker
                 cmd.ExecuteNonQuery();
             }
         }
+        
+        public bool LuoUusiProfiili(string nimi, string salasana)
+        {
+            string sql = "INSERT INTO Profiili (Nimi, Salasana) VALUES (@nimi, @pass)";
 
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@nimi", nimi);
+                    cmd.Parameters.AddWithValue("@pass", salasana); 
+
+                    conn.Open();
+                    int rivit = cmd.ExecuteNonQuery();
+                    return rivit > 0; 
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2627) return false;
+                    throw;
+                }
+            }
+        }
+        public List<Tapahtuma> HaeProfiilinTapahtumat()
+        {
+            List<Tapahtuma> lista = new List<Tapahtuma>();
+            string sql = @"SELECT t.ID, t.TapahtumaNimi, t.Summa, t.Paivamaara, t.Kuvaus, t.KategoriaID,  
+                          k.Nimi AS Tyyppi  
+                   FROM Tapahtuma t
+                   LEFT JOIN Kategoria k ON t.KategoriaID = k.ID
+                   WHERE t.ProfiiliID = @pid
+                   ORDER BY t.Paivamaara DESC";
+
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@pid", KirjautunutID);
+
+                conn.Open();
+                using (SqlDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        lista.Add(Tapahtuma.Create(rdr));
+                    }
+                }
+            }
+            return lista;
+        }
+        public int TarkistaKirjautuminen(string nimi, string salasana)
+        {
+            string sql = "SELECT ID FROM Profiili WHERE Nimi = @nimi AND Salasana = @pass";
+
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nimi", nimi);
+                cmd.Parameters.AddWithValue("@pass", salasana);
+
+                try
+                {
+                    conn.Open();
+                    object tulos = cmd.ExecuteScalar(); // AI Slop
+
+                    if (tulos != null && tulos != DBNull.Value)
+                    {
+                        return Convert.ToInt32(tulos); 
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Virhe kirjautumisessa: " + ex.Message);
+                }
+            }
+            return 0; 
+        }
+        public bool PoistaProfiili(int profiiliID) // AI Slop
+        {
+            string sqlTapahtumat = "DELETE FROM Tapahtuma WHERE ProfiiliID = @pid";
+            string sqlProfiili = "DELETE FROM Profiili WHERE ID = @pid";
+
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                conn.Open();
+                SqlTransaction trans = conn.BeginTransaction(); 
+
+                try
+                {
+                    SqlCommand cmd1 = new SqlCommand(sqlTapahtumat, conn, trans);
+                    cmd1.Parameters.AddWithValue("@pid", profiiliID);
+                    cmd1.ExecuteNonQuery();
+                    SqlCommand cmd2 = new SqlCommand(sqlProfiili, conn, trans);
+                    cmd2.Parameters.AddWithValue("@pid", profiiliID);
+                    cmd2.ExecuteNonQuery();
+
+                    trans.Commit();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    trans.Rollback();
+                    Console.WriteLine("Virhe poistossa: " + ex.Message);
+                    return false;
+                }
+            }
+        }
     }
 }

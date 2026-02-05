@@ -36,7 +36,7 @@
             graafitToolStripMenuItem = new ToolStripMenuItem();
             tekijäToolStripMenuItem = new ToolStripMenuItem();
             gbMain = new GroupBox();
-            dataGridView1 = new DataGridView();
+            dgvTapahtumat = new DataGridView();
             gb2 = new GroupBox();
             tbTapahtuma = new TextBox();
             label4 = new Label();
@@ -54,13 +54,14 @@
             btnMuokkaa = new Button();
             btnLisaa = new Button();
             groupBox2 = new GroupBox();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
             btnVertaa = new Button();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
+            kirjauduUlosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             gbMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTapahtumat).BeginInit();
             gb2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -79,7 +80,7 @@
             // 
             // loremToolStripMenuItem
             // 
-            loremToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { suljeToolStripMenuItem });
+            loremToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { kirjauduUlosToolStripMenuItem, suljeToolStripMenuItem });
             loremToolStripMenuItem.Name = "loremToolStripMenuItem";
             loremToolStripMenuItem.Size = new Size(56, 19);
             loremToolStripMenuItem.Text = "Valikko";
@@ -87,7 +88,7 @@
             // suljeToolStripMenuItem
             // 
             suljeToolStripMenuItem.Name = "suljeToolStripMenuItem";
-            suljeToolStripMenuItem.Size = new Size(99, 22);
+            suljeToolStripMenuItem.Size = new Size(180, 22);
             suljeToolStripMenuItem.Text = "Sulje";
             suljeToolStripMenuItem.Click += suljeToolStripMenuItem_Click;
             // 
@@ -120,22 +121,22 @@
             // 
             // gbMain
             // 
-            gbMain.Controls.Add(dataGridView1);
+            gbMain.Controls.Add(dgvTapahtumat);
             gbMain.Location = new Point(21, 31);
             gbMain.Name = "gbMain";
             gbMain.Size = new Size(459, 432);
             gbMain.TabIndex = 1;
             gbMain.TabStop = false;
             // 
-            // dataGridView1
+            // dgvTapahtumat
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 16);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(448, 411);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellClick += dataGridView1_CellClick;
+            dgvTapahtumat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTapahtumat.Location = new Point(6, 16);
+            dgvTapahtumat.Name = "dgvTapahtumat";
+            dgvTapahtumat.RowHeadersWidth = 51;
+            dgvTapahtumat.Size = new Size(448, 411);
+            dgvTapahtumat.TabIndex = 0;
+            dgvTapahtumat.CellClick += dataGridView1_CellClick;
             // 
             // gb2
             // 
@@ -304,6 +305,22 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Vertaile Tuloja";
             // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Location = new Point(202, 79);
+            dateTimePicker3.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(159, 23);
+            dateTimePicker3.TabIndex = 6;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(37, 79);
+            dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(159, 23);
+            dateTimePicker2.TabIndex = 5;
+            // 
             // btnVertaa
             // 
             btnVertaa.Location = new Point(37, 26);
@@ -318,21 +335,12 @@
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
-            // dateTimePicker2
+            // kirjauduUlosToolStripMenuItem
             // 
-            dateTimePicker2.Location = new Point(37, 79);
-            dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(159, 23);
-            dateTimePicker2.TabIndex = 5;
-            // 
-            // dateTimePicker3
-            // 
-            dateTimePicker3.Location = new Point(202, 79);
-            dateTimePicker3.Margin = new Padding(3, 4, 3, 4);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(159, 23);
-            dateTimePicker3.TabIndex = 6;
+            kirjauduUlosToolStripMenuItem.Name = "kirjauduUlosToolStripMenuItem";
+            kirjauduUlosToolStripMenuItem.Size = new Size(180, 22);
+            kirjauduUlosToolStripMenuItem.Text = "Kirjaudu Ulos";
+            kirjauduUlosToolStripMenuItem.Click += kirjauduUlosToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -353,7 +361,7 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             gbMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTapahtumat).EndInit();
             gb2.ResumeLayout(false);
             gb2.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -369,7 +377,7 @@
         private ToolStripMenuItem ipsumToolStripMenuItem;
         private GroupBox gbMain;
         private GroupBox gb2;
-        private DataGridView dataGridView1;
+        private DataGridView dgvTapahtumat;
         private ComboBox cbKategoria;
         private Label label1;
         private DateTimePicker dateTimePicker1;
@@ -394,5 +402,6 @@
         private DateTimePicker dateTimePicker3;
         private DateTimePicker dateTimePicker2;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private ToolStripMenuItem kirjauduUlosToolStripMenuItem;
     }
 }

@@ -43,3 +43,12 @@ GO
 SELECT t.TapahtumaNimi, t.Summa, k.Nimi AS Tyyppi
 FROM Tapahtuma t
 JOIN Kategoria k ON t.KategoriaID = k.ID;
+
+CREATE TABLE Profiili (
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Nimi NVARCHAR(50) UNIQUE NOT NULL,
+    Salasana NVARCHAR(100) NOT NULL 
+);
+
+
+ALTER TABLE Tapahtuma ADD ProfiiliID INT FOREIGN KEY REFERENCES Profiili(ID);

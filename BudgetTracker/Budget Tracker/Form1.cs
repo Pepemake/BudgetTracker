@@ -7,6 +7,7 @@ namespace Budget_Tracker
             InitializeComponent();
             PaivitaNaytto();
             LataaKategoriat();
+            LataaTiedot();
         }
         DatabaseHallinta db = new DatabaseHallinta();
         private int muokattavaID = 0;
@@ -16,20 +17,20 @@ namespace Budget_Tracker
 
         public void PaivitaNaytto()
         {
-            dataGridView1.DataSource = null;
+            dgvTapahtumat.DataSource = null;
             var lista = db.HaeKaikkiTapahtumat();
 
             if (lista.Count > 0)
             {
                 BindingSource bs = new BindingSource();
                 bs.DataSource = lista;
-                dataGridView1.DataSource = bs;
+                dgvTapahtumat.DataSource = bs;
 
-                if (dataGridView1.Columns["ID"] != null) dataGridView1.Columns["ID"].Visible = false;
-                if (dataGridView1.Columns["KategoriaID"] != null) dataGridView1.Columns["KategoriaID"].Visible = false;
-                if (dataGridView1.Columns["TapahtumaNimi"] != null)
+                if (dgvTapahtumat.Columns["ID"] != null) dgvTapahtumat.Columns["ID"].Visible = false;
+                if (dgvTapahtumat.Columns["KategoriaID"] != null) dgvTapahtumat.Columns["KategoriaID"].Visible = false;
+                if (dgvTapahtumat.Columns["TapahtumaNimi"] != null)
                 {
-                    dataGridView1.Columns["TapahtumaNimi"].HeaderText = "Tapahtuma";
+                    dgvTapahtumat.Columns["TapahtumaNimi"].HeaderText = "Tapahtuma";
                 }
             }
             else
@@ -85,7 +86,7 @@ namespace Budget_Tracker
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                DataGridViewRow row = dgvTapahtumat.Rows[e.RowIndex];
                 muokattavaID = (int)row.Cells["ID"].Value;
                 tbTapahtuma.Text = row.Cells["TapahtumaNimi"].Value.ToString();
                 tbMaara.Text = row.Cells["Summa"].Value.ToString();
@@ -174,7 +175,22 @@ namespace Budget_Tracker
             TilastoIkkuna haku = new TilastoIkkuna();
             haku.Show();
         }
+
+        private void LataaTiedot()
+        {
+            var omatTapahtumat = db.HaeKaikkiTapahtumat();
+            dgvTapahtumat.DataSource = omatTapahtumat;
+        }
+
+        private void kirjauduUlosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DatabaseHallinta.KirjautunutID = 0;
+            Kirjautuminen kirjaudu = new Kirjautuminen();
+            kirjaudu.Show();
+            this.Close();
+        }
     }
+    
 
 
 }

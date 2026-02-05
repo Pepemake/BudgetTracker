@@ -10,7 +10,7 @@ namespace Budget_Tracker
         }
         DatabaseHallinta db = new DatabaseHallinta();
         private int muokattavaID = 0;
-        private int klikkausLaskuri = 0;
+
 
 
 
@@ -151,7 +151,28 @@ namespace Budget_Tracker
         private void btnPaivita_Click(object sender, EventArgs e)
         {
             PaivitaNaytto();
-            
+
+        }
+
+        private void ipsumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void suljeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tekij‰ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ohjelman tekij‰: Perttu Airio | Budjetti Seuranta | 2026");
+        }
+
+        private void tilastotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TilastoIkkuna haku = new TilastoIkkuna();
+            haku.Show();
         }
     }
 

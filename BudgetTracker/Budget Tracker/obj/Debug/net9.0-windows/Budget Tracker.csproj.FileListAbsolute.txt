@@ -135,3 +135,4 @@ C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.
 C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.pdb
 C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget Tracker.genruntimeconfig.cache
 C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\ref\Budget Tracker.dll
+C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget_Tracker.TilastoIkkuna.resources

@@ -30,6 +30,7 @@
         {
             menuStrip1 = new MenuStrip();
             loremToolStripMenuItem = new ToolStripMenuItem();
+            kirjauduUlosToolStripMenuItem = new ToolStripMenuItem();
             suljeToolStripMenuItem = new ToolStripMenuItem();
             ipsumToolStripMenuItem = new ToolStripMenuItem();
             tilastotToolStripMenuItem = new ToolStripMenuItem();
@@ -56,9 +57,8 @@
             groupBox2 = new GroupBox();
             dateTimePicker3 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
-            btnVertaa = new Button();
+            btnValitse = new Button();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            kirjauduUlosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             gbMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTapahtumat).BeginInit();
@@ -74,7 +74,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 3, 0, 3);
-            menuStrip1.Size = new Size(1051, 25);
+            menuStrip1.Size = new Size(1049, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -82,13 +82,20 @@
             // 
             loremToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { kirjauduUlosToolStripMenuItem, suljeToolStripMenuItem });
             loremToolStripMenuItem.Name = "loremToolStripMenuItem";
-            loremToolStripMenuItem.Size = new Size(56, 19);
+            loremToolStripMenuItem.Size = new Size(70, 24);
             loremToolStripMenuItem.Text = "Valikko";
+            // 
+            // kirjauduUlosToolStripMenuItem
+            // 
+            kirjauduUlosToolStripMenuItem.Name = "kirjauduUlosToolStripMenuItem";
+            kirjauduUlosToolStripMenuItem.Size = new Size(180, 26);
+            kirjauduUlosToolStripMenuItem.Text = "Kirjaudu Ulos";
+            kirjauduUlosToolStripMenuItem.Click += kirjauduUlosToolStripMenuItem_Click;
             // 
             // suljeToolStripMenuItem
             // 
             suljeToolStripMenuItem.Name = "suljeToolStripMenuItem";
-            suljeToolStripMenuItem.Size = new Size(180, 22);
+            suljeToolStripMenuItem.Size = new Size(180, 26);
             suljeToolStripMenuItem.Text = "Sulje";
             suljeToolStripMenuItem.Click += suljeToolStripMenuItem_Click;
             // 
@@ -96,26 +103,26 @@
             // 
             ipsumToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tilastotToolStripMenuItem, graafitToolStripMenuItem, tekijäToolStripMenuItem });
             ipsumToolStripMenuItem.Name = "ipsumToolStripMenuItem";
-            ipsumToolStripMenuItem.Size = new Size(76, 19);
+            ipsumToolStripMenuItem.Size = new Size(96, 24);
             ipsumToolStripMenuItem.Text = "Listätietoja";
             // 
             // tilastotToolStripMenuItem
             // 
             tilastotToolStripMenuItem.Name = "tilastotToolStripMenuItem";
-            tilastotToolStripMenuItem.Size = new Size(113, 22);
+            tilastotToolStripMenuItem.Size = new Size(141, 26);
             tilastotToolStripMenuItem.Text = "Tilastot";
             tilastotToolStripMenuItem.Click += tilastotToolStripMenuItem_Click;
             // 
             // graafitToolStripMenuItem
             // 
             graafitToolStripMenuItem.Name = "graafitToolStripMenuItem";
-            graafitToolStripMenuItem.Size = new Size(113, 22);
+            graafitToolStripMenuItem.Size = new Size(141, 26);
             graafitToolStripMenuItem.Text = "Graafit";
             // 
             // tekijäToolStripMenuItem
             // 
             tekijäToolStripMenuItem.Name = "tekijäToolStripMenuItem";
-            tekijäToolStripMenuItem.Size = new Size(113, 22);
+            tekijäToolStripMenuItem.Size = new Size(141, 26);
             tekijäToolStripMenuItem.Text = "Tekijä";
             tekijäToolStripMenuItem.Click += tekijäToolStripMenuItem_Click;
             // 
@@ -160,7 +167,7 @@
             // 
             tbTapahtuma.Location = new Point(93, 44);
             tbTapahtuma.Name = "tbTapahtuma";
-            tbTapahtuma.Size = new Size(228, 23);
+            tbTapahtuma.Size = new Size(228, 27);
             tbTapahtuma.TabIndex = 12;
             // 
             // label4
@@ -168,7 +175,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(7, 137);
             label4.Name = "label4";
-            label4.Size = new Size(60, 15);
+            label4.Size = new Size(77, 20);
             label4.TabIndex = 11;
             label4.Text = "Kategoria:";
             // 
@@ -177,7 +184,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(166, 137);
             label2.Name = "label2";
-            label2.Size = new Size(43, 15);
+            label2.Size = new Size(54, 20);
             label2.TabIndex = 10;
             label2.Text = "Määrä:";
             // 
@@ -185,7 +192,7 @@
             // 
             tbMaara.Location = new Point(222, 134);
             tbMaara.Name = "tbMaara";
-            tbMaara.Size = new Size(99, 23);
+            tbMaara.Size = new Size(99, 27);
             tbMaara.TabIndex = 9;
             // 
             // tbKuvaus
@@ -202,7 +209,7 @@
             dateTimePicker1.Location = new Point(93, 91);
             dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(228, 23);
+            dateTimePicker1.Size = new Size(228, 27);
             dateTimePicker1.TabIndex = 3;
             // 
             // label3
@@ -210,7 +217,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(7, 184);
             label3.Name = "label3";
-            label3.Size = new Size(48, 15);
+            label3.Size = new Size(58, 20);
             label3.TabIndex = 6;
             label3.Text = "Kuvaus:";
             // 
@@ -219,7 +226,7 @@
             pvm.AutoSize = true;
             pvm.Location = new Point(6, 91);
             pvm.Name = "pvm";
-            pvm.Size = new Size(71, 15);
+            pvm.Size = new Size(88, 20);
             pvm.TabIndex = 5;
             pvm.Text = "Päivämäärä:";
             // 
@@ -228,7 +235,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(7, 42);
             label1.Name = "label1";
-            label1.Size = new Size(70, 15);
+            label1.Size = new Size(85, 20);
             label1.TabIndex = 4;
             label1.Text = "Tapahtuma:";
             // 
@@ -237,7 +244,7 @@
             cbKategoria.FormattingEnabled = true;
             cbKategoria.Location = new Point(93, 134);
             cbKategoria.Name = "cbKategoria";
-            cbKategoria.Size = new Size(73, 23);
+            cbKategoria.Size = new Size(73, 28);
             cbKategoria.TabIndex = 3;
             // 
             // groupBox1
@@ -297,20 +304,20 @@
             // 
             groupBox2.Controls.Add(dateTimePicker3);
             groupBox2.Controls.Add(dateTimePicker2);
-            groupBox2.Controls.Add(btnVertaa);
+            groupBox2.Controls.Add(btnValitse);
             groupBox2.Location = new Point(27, 479);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(385, 125);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Vertaile Tuloja";
+            groupBox2.Text = "Ajanrajaus";
             // 
             // dateTimePicker3
             // 
             dateTimePicker3.Location = new Point(202, 79);
             dateTimePicker3.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(159, 23);
+            dateTimePicker3.Size = new Size(159, 27);
             dateTimePicker3.TabIndex = 6;
             // 
             // dateTimePicker2
@@ -318,35 +325,29 @@
             dateTimePicker2.Location = new Point(37, 79);
             dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(159, 23);
+            dateTimePicker2.Size = new Size(159, 27);
             dateTimePicker2.TabIndex = 5;
             // 
-            // btnVertaa
+            // btnValitse
             // 
-            btnVertaa.Location = new Point(37, 26);
-            btnVertaa.Name = "btnVertaa";
-            btnVertaa.Size = new Size(324, 40);
-            btnVertaa.TabIndex = 0;
-            btnVertaa.Text = "Vertaa";
-            btnVertaa.UseVisualStyleBackColor = true;
+            btnValitse.Location = new Point(37, 26);
+            btnValitse.Name = "btnValitse";
+            btnValitse.Size = new Size(324, 40);
+            btnValitse.TabIndex = 0;
+            btnValitse.Text = "Valitse";
+            btnValitse.UseVisualStyleBackColor = true;
+            btnValitse.Click += btnVertaa_Click;
             // 
             // sqlCommand1
             // 
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
-            // kirjauduUlosToolStripMenuItem
-            // 
-            kirjauduUlosToolStripMenuItem.Name = "kirjauduUlosToolStripMenuItem";
-            kirjauduUlosToolStripMenuItem.Size = new Size(180, 22);
-            kirjauduUlosToolStripMenuItem.Text = "Kirjaudu Ulos";
-            kirjauduUlosToolStripMenuItem.Click += kirjauduUlosToolStripMenuItem_Click;
-            // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
             AutoSize = true;
-            ClientSize = new Size(1051, 655);
+            ClientSize = new Size(1049, 647);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(gb2);
@@ -394,7 +395,7 @@
         private Button btnMuokkaa;
         private Button btnLisaa;
         private GroupBox groupBox2;
-        private Button btnVertaa;
+        private Button btnValitse;
         private ToolStripMenuItem suljeToolStripMenuItem;
         private ToolStripMenuItem tilastotToolStripMenuItem;
         private ToolStripMenuItem graafitToolStripMenuItem;

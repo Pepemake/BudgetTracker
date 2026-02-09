@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,10 +67,10 @@ namespace Budget_Tracker
             }
             return lista;
         }
-        public void LisaaTapahtuma(string nimi, DateTime pvm, decimal summa, int kategoriaID, string kuvaus)
+        public void LisaaTapahtuma(string nimi, DateTime pvm, decimal summa, int kategoriaID, string kuvaus, int profiiliID)
         {
-            string sql = @"INSERT INTO Tapahtuma (TapahtumaNimi, Paivamaara, Summa, KategoriaID, Kuvaus) 
-                   VALUES (@nimi, @pvm, @summa, @kid, @kuvaus)";
+            string sql = @"INSERT INTO Tapahtuma (TapahtumaNimi, Paivamaara, Summa, KategoriaID, Kuvaus, ProfiiliID) 
+                   VALUES (@nimi, @pvm, @summa, @kid, @kuvaus, @pid)";
 
             using (SqlConnection conn = new SqlConnection(BudgetTracker))
             {
@@ -79,6 +80,7 @@ namespace Budget_Tracker
                 cmd.Parameters.AddWithValue("@summa", summa);
                 cmd.Parameters.AddWithValue("@kid", kategoriaID);
                 cmd.Parameters.AddWithValue("@kuvaus", kuvaus);
+                cmd.Parameters.AddWithValue("@pid", profiiliID);
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
@@ -113,22 +115,21 @@ namespace Budget_Tracker
                 cmd.ExecuteNonQuery();
             }
         }
-        
-        public bool LuoUusiProfiili(string nimi, string salasana)
-        {
-            string sql = "INSERT INTO Profiili (Nimi, Salasana) VALUES (@nimi, @pass)";
 
+        public bool LuoUusiProfiili(string nimi, string salasana, decimal budjetti)
+        {
+            string sql = "INSERT INTO Profiili (Nimi, Salasana, Kuukausibudjetti) VALUES (@nimi, @pass, @budjetti)";
             using (SqlConnection conn = new SqlConnection(BudgetTracker))
             {
                 try
                 {
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@nimi", nimi);
-                    cmd.Parameters.AddWithValue("@pass", salasana); 
-
+                    cmd.Parameters.AddWithValue("@pass", salasana);
+                    cmd.Parameters.AddWithValue("@budjetti", budjetti); // Uusi parametri
                     conn.Open();
                     int rivit = cmd.ExecuteNonQuery();
-                    return rivit > 0; 
+                    return rivit > 0;
                 }
                 catch (SqlException ex)
                 {
@@ -219,6 +220,32 @@ namespace Budget_Tracker
                     return false;
                 }
             }
+        }
+        public DataTable HaeTapahtumatAikavalilla(int profiiliID, DateTime alku, DateTime loppu)
+        {
+            DataTable dt = new DataTable();
+            string sql = "SELECT ID, Selite, Summa, Paivamaara, Kategoria FROM Tapahtuma " +
+                         "WHERE ProfiiliID = @pid AND Paivamaara BETWEEN @alku AND @loppu " +
+                         "ORDER BY Paivamaara DESC";
+
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@pid", profiiliID);
+                cmd.Parameters.AddWithValue("@alku", alku);
+                cmd.Parameters.AddWithValue("@loppu", loppu);
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Virhe haussa: " + ex.Message);
+                }
+            }
+            return dt;
         }
     }
 }

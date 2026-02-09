@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace Budget_Tracker
 {
     public partial class Form1 : Form
@@ -64,7 +66,7 @@ namespace Budget_Tracker
                 DateTime pvm = dateTimePicker1.Value;
                 string kuvaus = tbKuvaus.Text;
                 int kategoriaID = (int)cbKategoria.SelectedValue;
-                db.LisaaTapahtuma(tbTapahtuma.Text, pvm, summa, kategoriaID, kuvaus);
+                db.LisaaTapahtuma(tbTapahtuma.Text, pvm, summa, kategoriaID, kuvaus, DatabaseHallinta.KirjautunutID);
                 TyhjennaKentat();
                 PaivitaNaytto();
                 MessageBox.Show("Tallennettu!");
@@ -188,6 +190,24 @@ namespace Budget_Tracker
             Kirjautuminen kirjaudu = new Kirjautuminen();
             kirjaudu.Show();
             this.Close();
+        }
+        private void btnVertaa_Click(object sender, EventArgs e)
+        {
+            DateTime alku = dateTimePicker2.Value.Date; 
+            DateTime loppu = dateTimePicker3.Value.Date.AddDays(1).AddTicks(-1);
+            if (alku > loppu)
+            {
+                MessageBox.Show("Alkup‰iv‰m‰‰r‰ ei voi olla loppup‰iv‰m‰‰r‰n j‰lkeen!");
+                return;
+            }
+            int nykyinenKayttajaID = DatabaseHallinta.KirjautunutID;
+            DataTable tulokset = db.HaeTapahtumatAikavalilla(nykyinenKayttajaID, alku, loppu);
+            dgvTapahtumat.DataSource = tulokset;
+            decimal summa = 0;
+            foreach (DataRow rivi in tulokset.Rows)
+            {
+                summa += Convert.ToDecimal(rivi["Summa"]);
+            }
         }
     }
     

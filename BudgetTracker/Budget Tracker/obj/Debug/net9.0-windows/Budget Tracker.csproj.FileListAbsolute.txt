@@ -137,3 +137,5 @@ C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.
 C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\ref\Budget Tracker.dll
 C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget_Tracker.TilastoIkkuna.resources
 C:\Kouluhommat\Budget\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget_Tracker.Kirjautuminen.resources
+C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget_Tracker.Kirjautuminen.resources
+C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget_Tracker.TilastoIkkuna.resources

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using System.Globalization;
 
 
 namespace Budget_Tracker
@@ -43,21 +44,38 @@ namespace Budget_Tracker
         {
             string uusiNimi = cbKayttajat.Text.Trim();
             string uusiSalasana = tbProfiilisalasana.Text.Trim();
+            decimal budjetti = 0;
+            string syote = tbBudjetti.Text.Trim();
 
+            if (!string.IsNullOrWhiteSpace(syote))
+            {
+                try
+                {
+                    string siivottuSyote = syote.Replace(',', '.').Replace(" ", "");
+                    budjetti = decimal.Parse(siivottuSyote, System.Globalization.CultureInfo.InvariantCulture);
+                }
+                catch
+                {
+                    MessageBox.Show("Budjetin muuntaminen epäonnistui. Tarkista, että kirjoitit vain numeroita.");
+                    return;
+                }
+            }
             if (string.IsNullOrWhiteSpace(uusiNimi) || string.IsNullOrWhiteSpace(uusiSalasana))
             {
                 MessageBox.Show("Kirjoita haluamasi nimi valikkoon ja salasana tekstikenttään!");
                 return;
             }
-            if (db.LuoUusiProfiili(uusiNimi, uusiSalasana))
+            if (db.LuoUusiProfiili(uusiNimi, uusiSalasana, budjetti))
             {
-                MessageBox.Show($"Profiili '{uusiNimi}' luotu!");
+                MessageBox.Show($"Profiili '{uusiNimi}' luotu budjetilla {budjetti}€!");
                 LataaProfiilitListaan();
                 cbKayttajat.Text = uusiNimi;
+                tbBudjetti.Clear();
+                tbProfiilisalasana.Clear();
             }
             else
             {
-                MessageBox.Show("Nimi on jo käytössä. Valitse toinen nimi.");
+                MessageBox.Show("Nimi on jo käytössä tai tapahtui virhe.");
             }
         }
         private void btnKirjaudu_Click(object sender, EventArgs e)
@@ -138,7 +156,7 @@ namespace Budget_Tracker
                     {
                         MessageBox.Show("Profiili poistettu.");
                         tbProfiilisalasana.Clear();
-                        LataaProfiilitListaan(); 
+                        LataaProfiilitListaan();
                     }
                     else
                     {
@@ -150,6 +168,11 @@ namespace Budget_Tracker
             {
                 MessageBox.Show("Väärä salasana! Profiilia ei voi poistaa ilman oikeaa salasanaa.");
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

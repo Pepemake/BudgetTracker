@@ -7,9 +7,9 @@ namespace Budget_Tracker
         public Form1()
         {
             InitializeComponent();
-            PaivitaNaytto();
             LataaKategoriat();
             LataaTiedot();
+            PaivitaNaytto();
         }
         DatabaseHallinta db = new DatabaseHallinta();
         private int muokattavaID = 0;
@@ -20,7 +20,7 @@ namespace Budget_Tracker
         public void PaivitaNaytto()
         {
             dgvTapahtumat.DataSource = null;
-            var lista = db.HaeKaikkiTapahtumat();
+            var lista = db.HaeProfiilinTapahtumat(DatabaseHallinta.KirjautunutID);
 
             if (lista.Count > 0)
             {
@@ -164,7 +164,8 @@ namespace Budget_Tracker
 
         private void suljeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+            
         }
 
         private void tekijäToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,11 +173,6 @@ namespace Budget_Tracker
             MessageBox.Show("Ohjelman tekijä: Perttu Airio | Budjetti Seuranta | 2026");
         }
 
-        private void tilastotToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TilastoIkkuna haku = new TilastoIkkuna();
-            haku.Show();
-        }
 
         private void LataaTiedot()
         {
@@ -193,7 +189,7 @@ namespace Budget_Tracker
         }
         private void btnVertaa_Click(object sender, EventArgs e)
         {
-            DateTime alku = dateTimePicker2.Value.Date; 
+            DateTime alku = dateTimePicker2.Value.Date;
             DateTime loppu = dateTimePicker3.Value.Date.AddDays(1).AddTicks(-1);
             if (alku > loppu)
             {
@@ -209,8 +205,14 @@ namespace Budget_Tracker
                 summa += Convert.ToDecimal(rivi["Summa"]);
             }
         }
+
+        private void graafitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Graafit graafiIkkuna = new Graafit();
+            graafiIkkuna.ShowDialog();
+        }
     }
-    
+
 
 
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
@@ -138,7 +139,7 @@ namespace Budget_Tracker
                 }
             }
         }
-        public List<Tapahtuma> HaeProfiilinTapahtumat()
+        public List<Tapahtuma> HaeProfiilinTapahtumat(int pid)
         {
             List<Tapahtuma> lista = new List<Tapahtuma>();
             string sql = @"SELECT t.ID, t.TapahtumaNimi, t.Summa, t.Paivamaara, t.Kuvaus, t.KategoriaID,  
@@ -151,8 +152,7 @@ namespace Budget_Tracker
             using (SqlConnection conn = new SqlConnection(BudgetTracker))
             {
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@pid", KirjautunutID);
-
+                cmd.Parameters.AddWithValue("@pid", pid);
                 conn.Open();
                 using (SqlDataReader rdr = cmd.ExecuteReader())
                 {
@@ -224,16 +224,20 @@ namespace Budget_Tracker
         public DataTable HaeTapahtumatAikavalilla(int profiiliID, DateTime alku, DateTime loppu)
         {
             DataTable dt = new DataTable();
-            string sql = "SELECT ID, Selite, Summa, Paivamaara, Kategoria FROM Tapahtuma " +
-                         "WHERE ProfiiliID = @pid AND Paivamaara BETWEEN @alku AND @loppu " +
-                         "ORDER BY Paivamaara DESC";
+            DateTime loppuKlo = loppu.Date.AddDays(1).AddTicks(-1);
+            string sql = @"SELECT ID, TapahtumaNimi, Summa, Paivamaara, Kuvaus 
+                   FROM Tapahtuma 
+                   WHERE ProfiiliID = @pid 
+                   AND Paivamaara BETWEEN @alku AND @loppu 
+                   ORDER BY Paivamaara DESC";
 
             using (SqlConnection conn = new SqlConnection(BudgetTracker))
             {
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@pid", profiiliID);
-                cmd.Parameters.AddWithValue("@alku", alku);
-                cmd.Parameters.AddWithValue("@loppu", loppu);
+                cmd.Parameters.AddWithValue("@alku", alku.Date);
+                cmd.Parameters.AddWithValue("@loppu", loppuKlo);
+
                 try
                 {
                     conn.Open();
@@ -242,10 +246,35 @@ namespace Budget_Tracker
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Virhe haussa: " + ex.Message);
+                    System.Windows.Forms.MessageBox.Show("Virhe haussa: " + ex.Message);
                 }
             }
             return dt;
+        }
+        public decimal HaeKayttajanBudjetti(int profiiliID)
+        {
+            decimal budjetti = 0;
+            string sql = "SELECT Kuukausibudjetti FROM Profiili WHERE ID = @pid";
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@pid", profiiliID);
+                try
+                {
+                    conn.Open();
+                    object tulos = cmd.ExecuteScalar();
+
+                    if (tulos != null && tulos != DBNull.Value)
+                    {
+                        budjetti = Convert.ToDecimal(tulos);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Virhe budjetin haussa: " + ex.Message);
+                }
+            }
+            return budjetti;
         }
     }
 }

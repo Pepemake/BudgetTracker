@@ -33,7 +33,6 @@
             kirjauduUlosToolStripMenuItem = new ToolStripMenuItem();
             suljeToolStripMenuItem = new ToolStripMenuItem();
             ipsumToolStripMenuItem = new ToolStripMenuItem();
-            tilastotToolStripMenuItem = new ToolStripMenuItem();
             graafitToolStripMenuItem = new ToolStripMenuItem();
             tekijäToolStripMenuItem = new ToolStripMenuItem();
             gbMain = new GroupBox();
@@ -101,28 +100,22 @@
             // 
             // ipsumToolStripMenuItem
             // 
-            ipsumToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tilastotToolStripMenuItem, graafitToolStripMenuItem, tekijäToolStripMenuItem });
+            ipsumToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { graafitToolStripMenuItem, tekijäToolStripMenuItem });
             ipsumToolStripMenuItem.Name = "ipsumToolStripMenuItem";
             ipsumToolStripMenuItem.Size = new Size(96, 24);
             ipsumToolStripMenuItem.Text = "Listätietoja";
             // 
-            // tilastotToolStripMenuItem
-            // 
-            tilastotToolStripMenuItem.Name = "tilastotToolStripMenuItem";
-            tilastotToolStripMenuItem.Size = new Size(141, 26);
-            tilastotToolStripMenuItem.Text = "Tilastot";
-            tilastotToolStripMenuItem.Click += tilastotToolStripMenuItem_Click;
-            // 
             // graafitToolStripMenuItem
             // 
             graafitToolStripMenuItem.Name = "graafitToolStripMenuItem";
-            graafitToolStripMenuItem.Size = new Size(141, 26);
+            graafitToolStripMenuItem.Size = new Size(137, 26);
             graafitToolStripMenuItem.Text = "Graafit";
+            graafitToolStripMenuItem.Click += graafitToolStripMenuItem_Click;
             // 
             // tekijäToolStripMenuItem
             // 
             tekijäToolStripMenuItem.Name = "tekijäToolStripMenuItem";
-            tekijäToolStripMenuItem.Size = new Size(141, 26);
+            tekijäToolStripMenuItem.Size = new Size(137, 26);
             tekijäToolStripMenuItem.Text = "Tekijä";
             tekijäToolStripMenuItem.Click += tekijäToolStripMenuItem_Click;
             // 
@@ -137,6 +130,11 @@
             // 
             // dgvTapahtumat
             // 
+            dgvTapahtumat.AllowUserToAddRows = false;
+            dgvTapahtumat.AllowUserToDeleteRows = false;
+            dgvTapahtumat.AllowUserToOrderColumns = true;
+            dgvTapahtumat.AllowUserToResizeColumns = false;
+            dgvTapahtumat.AllowUserToResizeRows = false;
             dgvTapahtumat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTapahtumat.Location = new Point(6, 16);
             dgvTapahtumat.Name = "dgvTapahtumat";
@@ -397,7 +395,6 @@
         private GroupBox groupBox2;
         private Button btnValitse;
         private ToolStripMenuItem suljeToolStripMenuItem;
-        private ToolStripMenuItem tilastotToolStripMenuItem;
         private ToolStripMenuItem graafitToolStripMenuItem;
         private ToolStripMenuItem tekijäToolStripMenuItem;
         private DateTimePicker dateTimePicker3;

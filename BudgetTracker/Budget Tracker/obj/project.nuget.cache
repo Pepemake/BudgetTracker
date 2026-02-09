@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XmtV0YboUMs=",
+  "dgSpecHash": "VhXrwUybGbw=",
   "success": true,
   "projectFilePath": "C:\\Users\\phoeu\\Documents\\koodi projektit\\TVT2026 Talvi\\BudgetTracker\\BudgetTracker\\Budget Tracker\\Budget Tracker.csproj",
   "expectedPackageFiles": [
@@ -37,7 +37,8 @@
     "C:\\Users\\phoeu\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
     "C:\\Users\\phoeu\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.11\\system.security.cryptography.pkcs.9.0.11.nupkg.sha512",
     "C:\\Users\\phoeu\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.11\\system.security.cryptography.protecteddata.9.0.11.nupkg.sha512",
-    "C:\\Users\\phoeu\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+    "C:\\Users\\phoeu\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\phoeu\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
   ],
   "logs": []
 }

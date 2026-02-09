@@ -35,6 +35,7 @@
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             cbKayttajat = new ComboBox();
             groupBox1 = new GroupBox();
+            btnMuokkaa = new Button();
             lblBudjetti = new Label();
             tbBudjetti = new TextBox();
             btnPoistaprofiili = new Button();
@@ -81,7 +82,7 @@
             btnLuoprofiili.Location = new Point(7, 116);
             btnLuoprofiili.Margin = new Padding(3, 4, 3, 4);
             btnLuoprofiili.Name = "btnLuoprofiili";
-            btnLuoprofiili.Size = new Size(160, 83);
+            btnLuoprofiili.Size = new Size(78, 83);
             btnLuoprofiili.TabIndex = 5;
             btnLuoprofiili.Text = "Luo Profiili";
             btnLuoprofiili.UseVisualStyleBackColor = true;
@@ -99,6 +100,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnMuokkaa);
             groupBox1.Controls.Add(lblBudjetti);
             groupBox1.Controls.Add(tbBudjetti);
             groupBox1.Controls.Add(btnPoistaprofiili);
@@ -116,6 +118,17 @@
             groupBox1.Size = new Size(451, 441);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
+            // 
+            // btnMuokkaa
+            // 
+            btnMuokkaa.Location = new Point(86, 116);
+            btnMuokkaa.Margin = new Padding(3, 4, 3, 4);
+            btnMuokkaa.Name = "btnMuokkaa";
+            btnMuokkaa.Size = new Size(81, 83);
+            btnMuokkaa.TabIndex = 15;
+            btnMuokkaa.Text = "Muokkaa Profiilia";
+            btnMuokkaa.UseVisualStyleBackColor = true;
+            btnMuokkaa.Click += btnMuokkaa_Click;
             // 
             // lblBudjetti
             // 
@@ -209,5 +222,6 @@
         private Button btnPoistaprofiili;
         private TextBox tbBudjetti;
         private Label lblBudjetti;
+        private Button btnMuokkaa;
     }
 }

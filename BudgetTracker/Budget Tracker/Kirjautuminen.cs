@@ -174,5 +174,25 @@ namespace Budget_Tracker
         {
 
         }
+
+        private void btnMuokkaa_Click(object sender, EventArgs e)
+        {
+            string nimi = txtKayttaja.Text;
+            string salasana = txtSalasana.Text;
+
+            // Tarkistetaan ensin, onko käyttäjä olemassa (käytetään olemassa olevaa kirjautumismetodiasi)
+            int pid = db.KirjauduSisaan(nimi, salasana);
+
+            if (pid > 0)
+            {
+                // Avataan muokkausikkuna ja välitetään ID sinne
+                MuokkaaProfiilia muokkausIkkuna = new MuokkaaProfiilia(pid);
+                muokkausIkkuna.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Syötä oikea käyttäjätunnus ja salasana muokataksesi tietoja.");
+            }
+        }
     }
 }

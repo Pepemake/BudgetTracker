@@ -191,6 +191,29 @@ namespace Budget_Tracker
             }
             return 0; 
         }
+        public bool PaivitaProfiili(int id, string uusiNimi, string uusiSalasana, decimal uusiBudjetti)
+        {
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                string sql = "UPDATE Profiili SET Nimi = @nimi, Salasana = @pass, Kuukausibudjetti = @budjetti WHERE ID = @id";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nimi", uusiNimi);
+                cmd.Parameters.AddWithValue("@pass", uusiSalasana);
+                cmd.Parameters.AddWithValue("@budjetti", uusiBudjetti);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                try
+                {
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Virhe päivityksessä: " + ex.Message);
+                    return false;
+                }
+            }
+        }
         public bool PoistaProfiili(int profiiliID) // AI Slop
         {
             string sqlTapahtumat = "DELETE FROM Tapahtuma WHERE ProfiiliID = @pid";

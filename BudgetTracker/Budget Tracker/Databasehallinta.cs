@@ -41,10 +41,37 @@ namespace Budget_Tracker
                 {
                     Console.WriteLine("Ongelma tietokannassa: " + ex.Message);
                 }
-            } 
+            }
 
             return lista;
         }
+        public List<string> HaeProfiilienNimet()
+        {
+            List<string> lista = new List<string>();
+            string sql = "SELECT Nimi FROM Profiili ORDER BY Nimi ASC";
+
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                try
+                {
+                    conn.Open();
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            lista.Add(rdr["Nimi"].ToString());
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Virhe haettaessa nimiä: " + ex.Message);
+                }
+            }
+            return lista;
+        }
+
         public List<Kategoria> HaeKategoriat()
         {
             List<Kategoria> lista = new List<Kategoria>();
@@ -136,6 +163,33 @@ namespace Budget_Tracker
                 {
                     if (ex.Number == 2627) return false;
                     throw;
+                }
+            }
+        }
+        public bool MuokkaaProfiilia(string vanhaNimi, string vanhaSalasana, string uusiNimi, string uusiSalasana, decimal uusiBudjetti)
+        {
+            using (SqlConnection conn = new SqlConnection(BudgetTracker))
+            {
+                string sql = @"UPDATE Profiili 
+                       SET Nimi = @uusiNimi, Salasana = @uusiSalasana, Kuukausibudjetti = @uusiBudjetti 
+                       WHERE Nimi = @vanhaNimi AND Salasana = @vanhaSalasana";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@uusiNimi", uusiNimi);
+                cmd.Parameters.AddWithValue("@uusiSalasana", uusiSalasana);
+                cmd.Parameters.AddWithValue("@uusiBudjetti", uusiBudjetti);
+                cmd.Parameters.AddWithValue("@vanhaNimi", vanhaNimi);
+                cmd.Parameters.AddWithValue("@vanhaSalasana", vanhaSalasana);
+                try
+                {
+                    conn.Open();
+                    int affectedRows = cmd.ExecuteNonQuery();
+                    return affectedRows > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("SQL Virhe: " + ex.Message);
+                    return false;
                 }
             }
         }

@@ -141,3 +141,4 @@ C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTrack
 C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget_Tracker.Graafit.resources
 C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\WinForms.DataVisualization.Utilities.dll
 C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\bin\Debug\net9.0-windows\WinForms.DataVisualization.dll
+C:\Users\phoeu\Documents\koodi projektit\TVT2026 Talvi\BudgetTracker\BudgetTracker\Budget Tracker\obj\Debug\net9.0-windows\Budget_Tracker.Muokkaaprofiilia.resources
